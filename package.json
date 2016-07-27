@@ -1,0 +1,16 @@
+{
+  "name": "scrapsubtitles",
+  "version": "0.0.0",
+  "description": "A script to fetch gazillions of subtitles from opensubtitles",
+  "main": "main.js",
+  "scripts": {
+    "test": "n00pz"
+  },
+  "author": "Lucas Vieira <vieiralucas4@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "lodash": "^4.14.0",
+    "opensubtitles-api": "^3.2.0"
+  }
+}
