@@ -19,7 +19,7 @@ const log = msg => {
 
 Bluebird.map(series, findUntilTheEnd)
   .then(result => {
-    fs.writeFileSync('ouput.json', JSON.stringify(result, null, 2));
+    fs.writeFileSync('output.json', JSON.stringify(result, null, 2));
     console.log('Finished with success');
     console.log(`${series.length} series were searched`);
     console.log(`For an total of ${_.flatten(result).length} subtitles`);
@@ -34,6 +34,7 @@ function findUntilTheEnd(name) {
     return findSubtitle(name, season, episode)
       .then(url => {
         urls.push({
+          name: name,
           season: season,
           episode: episode,
           url: url
